@@ -18,19 +18,22 @@
             <th>ID</th>
             <th>Title</th>
             <th>News</th>
+            <th></th>
           </tr>
           <% for (var i = 0; i < news.length; i ++) { %>
             <tr>
               <td><%= news[i].id_news %></td>
               <td><%= news[i].title %></td>
               <td><%= news[i].news %></td>
+              <!---<td><input id="delete" type="button" class="btn btn-secondary" value="Delete" onclick="deleteRow()"></td>--->
+              <td><a href="/delete/<%= news[i].id %>" class="btn btn-secondary">Delete</a></td>
             </tr>
           <% } %>
         </table>
       </div>
 
       <div class="col-md-6 mt-4 card">
-        <form class="card-body" action="/news" method="post">
+        <form class="card-body" action="/" method="post">
           <h3 class="card-title">Add News</h3>
           <div class="form-group">
             <input name="title" type="text" class="form-control" placeholder="News Titlte">
