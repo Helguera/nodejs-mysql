@@ -1,5 +1,12 @@
 <% include partials/_header %>
 
+<% if (messages.success) { %>
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <a><%= messages.success %></a>
+    </div>
+  <% } %>
+
 <div class="container">
     <div class="row mt-3">
         <div class="col-md-7">
